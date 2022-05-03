@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { setCredentials } from "../../redux/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
@@ -28,14 +27,14 @@ const SignIn = () => {
             });
             console.log(response);
             setMsg(response.data.message);
+            console.log(response.data.loggedin);
             if (response.data.loggedin) {
                 const userID = response.data.id;
                 setCookie("userId", userID, { path: "/" });
                 console.log(cookies["userId"]);
-                dispatch(setCredentials(true));
                 navigate("/");
             } else {
-                dispatch(setCredentials(false));
+                return setMsg("User or password incorrect");
             }
             return response
         } 

@@ -30,6 +30,10 @@ textarea {
     grid-template-columns: 1fr 1fr;
     width: 100%;
 
+    @media screen and (max-width: 570px) {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 .form-update {

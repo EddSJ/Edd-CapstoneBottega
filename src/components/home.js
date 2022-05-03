@@ -17,6 +17,8 @@ const Home = () => {
     const [cookies] = useCookies(["userId"]);
 
     const myApi = "https://api-store-ed.herokuapp.com/productos"
+    // const myApi = "http://localhost:5000/productos"
+
     const dispatch = useDispatch();
 
 

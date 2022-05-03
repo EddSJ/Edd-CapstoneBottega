@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import ListingItems from "./items/listingItems";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addItems } from "../redux/items/itemSlice";
 import axios from "axios";
 import ItemsListing from "./items-manege/itemsListing";
@@ -16,21 +16,19 @@ const Home = () => {
 
     const [cookies] = useCookies(["userId"]);
 
-    // const myApi = "http://127.0.0.1:5000/productos"
-    // const myApi = "https://api-store-ed.herokuapp.com/productos"
-    const myApi = "#"
+    const myApi = "https://api-store-ed.herokuapp.com/productos"
     const dispatch = useDispatch();
 
 
-    // useEffect(() => {
-    //     const fetchItems = async () => {
-    //         const result = await axios.get(myApi)
-    //         .catch(err => console.log(err));
-    //         dispatch(addItems(result.data));
+    useEffect(() => {
+        const fetchItems = async () => {
+            const result = await axios.get(myApi)
+            .catch(err => console.log(err));
+            dispatch(addItems(result.data));
         
-    //     }
-    //     fetchItems();
-    //     }, []);
+        }
+        fetchItems();
+        }, []);
 
 
     return (

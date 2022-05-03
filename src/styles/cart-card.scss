@@ -1,0 +1,43 @@
+.cart-item {
+    &__image {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image img {
+        width: 300px;
+        height: 100%;
+        background-size: cover;
+    }   
+
+    &__category {
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__price {
+        text-align: center;
+    }
+
+    &__icon {
+        text-align: center;
+    }
+}
+
+.cart-item__icon svg  {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: rgb(109, 7, 7);
+    transition: 0.3s;
+}
+
+.cart-item__icon:hover svg {
+    color: rgb(59, 5, 5);
+}

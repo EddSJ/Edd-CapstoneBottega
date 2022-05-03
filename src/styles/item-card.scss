@@ -1,0 +1,11 @@
+// .item-container {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+// }
+
+.item-imagen img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+}
+

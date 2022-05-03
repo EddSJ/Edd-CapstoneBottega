@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+}
+
+@import "./header.scss";
+@import "./home.scss";
+@import "./footer.scss";
+@import "./item-card.scss";
+@import "./item-listing.scss";
+@import "./cart-card.scss";
+@import "./item-detail-modal.scss";
+@import "./login-manege.scss";
+@import "./forms.scss";
+@import "./buttons.scss";
